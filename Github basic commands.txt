@@ -1,0 +1,533 @@
+git --version
+git version 2.21.0.windows.1
+
+
+$ dir
+Anaconda3
+AppData
+Application\ Data
+Contacts
+Cookies
+Desktop
+Documents
+Downloads
+Favorites
+Links
+Local\ Settings
+Music
+My\ Documents
+NetHood
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms
+ntuser.ini
+Pictures
+PrintHood
+PycharmProjects
+Recent
+Saved\ Games
+Searches
+SendTo
+Start\ Menu
+Templates
+Videos
+workspace
+
+$ cd Downloads/
+
+$ rmdir My project
+
+$ mkdir MyProject
+
+$ cd MyProject/
+
+$ touch tset.html
+
+$ rm -rf *
+
+$ dir
+test
+
+$ rmdir test
+
+$ rm -rf test
+
+$ dir
+
+$ touch pcode.py
+
+$ git init
+Initialized empty Git repository in C:/Users/rakesh/Downloads/MyProject/.git/
+
+$ dir
+pcode.py
+
+$ git config global -- user.name "rakesh"
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+$ git config --global user.name "rakesh"
+
+$ git config --global user.email "rakesh.s.shankala@gmail.com"
+
+$ git add pcode.py
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pcode.py
+
+
+
+
+$ touch pcode2.py
+
+$ git add *.py
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pcode.py
+        new file:   pcode2.py
+
+$ git rm --cached pcode2.py
+rm 'pcode2.py'
+
+$ dir
+pcode.py  pcode2.py
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pcode.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        pcode2.py
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pcode.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pcode.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        pcode2.py
+
+$ git checkout --pcode.py
+
+error: unknown option `pcode.py'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+
+$ git checkout -- pcode.py
+
+$ git commit .
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pcode.py
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pcode.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        pcode2.py
+
+$ git add .
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   pcode.py
+        new file:   pcode2.py
+
+$ git commit .
+[master (root-commit) 20a47e9] hi this is commit:
+ 2 files changed, 2 insertions(+)
+ create mode 100644 pcode.py
+ create mode 100644 pcode2.py
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pcode2.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git commit -m "this is second commit"
+On branch master
+Changes not staged for commit:
+        modified:   pcode2.py
+
+no changes added to commit
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pcode.py
+        modified:   pcode2.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git commit -m "his is 2"
+On branch master
+Changes not staged for commit:
+        modified:   pcode.py
+        modified:   pcode2.py
+
+no changes added to commit
+
+$ git add pcode2.py
+
+$ git commit -m "his is 2"
+[master 04800a8] his is 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git add *
+
+$ git commit -m "his is 3"
+[master 76621d0] his is 3
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+$ touch .gitignore
+
+$ touch log.txt
+
+$ vi log.txt
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   pcode.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   pcode.py
+
+$ mkdir test
+
+$ mkdir test2
+
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   pcode.py
+        new file:   test/test11
+        new file:   test2/test22
+
+$ git commit *
+error: pathspec 'log.txt' did not match any file(s) known to git
+
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   pcode.py
+        new file:   test/test11
+        new file:   test2/test22
+
+$ git commit *
+error: pathspec 'log.txt' did not match any file(s) known to git
+
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   pcode.py
+        new file:   test/test11
+        new file:   test2/test22
+		
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   pcode.py
+        new file:   test/test11
+        new file:   test2/test22
+
+$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        modified:   pcode.py
+        new file:   test/test11
+        new file:   test2/test22
+
+$ git commit -m "thius is commit"
+[master 69e106a] thius is commit
+ 4 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 test/test11
+ create mode 100644 test2/test22
+
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test/test11
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+$ git branch testbranch
+
+$ git add .
+
+$ git commit -m "bhdghc"
+[master 92f1d04] bhdghc
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git checkout testbranch
+Switched to branch 'testbranch'
+
+$ touch lost.py
+
+$ git rm --cached log.txt
+rm 'log.txt'
+
+$ git add lost.py
+
+$ git commit lost.py
+
+$ git commit -m "fhdkhgdh"
+[testbranch 6fa0815] fhdkhgdh
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+ delete mode 100644 .gitignore
+ create mode 100644 lost.py
+
+$ git status
+On branch testbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git checkout master
+Switched to branch 'master'
+
+$ git merge testbranch
+Removing .gitignore
+Merge made by the 'recursive' strategy.
+ .gitignore | 2 --
+ lost.py    | 1 +
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+ delete mode 100644 .gitignore
+ create mode 100644 lost.py
+
+$ git merge testbranch
+Already up to date.
+
+$ git remote add origin https://github.com/rakeshsinghshankala/My-app.git
+
+$ git remote
+origin
+
+$ git push -u origin master
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (28/28), 2.00 KiB | 46.00 KiB/s, done.
+Total 28 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/rakeshsinghshankala/My-app.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+$ touch README.md
+
+$ git add .
+warning: LF will be replaced by CRLF in log.txt.
+The file will have its original line endings in your working directory
+
+$ git commit -m "sfhf"
+[master fd82c02] sfhf
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 log.txt
+
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 336 bytes | 112.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rakeshsinghshankala/My-app.git
+   6a25480..fd82c02  master -> master
+
+$ git pull
+Already up to date.
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+nothing to commit, working tree clean
