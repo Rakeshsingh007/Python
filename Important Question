@@ -1,0 +1,15 @@
+difference bw python 2 and 3 and which version you are using
+how python script runs
+range vs xrange
+Python memory management
+Namespaces and Scope
+max = 5<4 and 5 or 4 
+max = 5 if 5<4 else 4
+args and kwargs
+__name__ variable
+byte object and str object
+Inplace operator     a = a+b and it will return a+b and store it in a also
+enumerate,zip,iteritem,items,sorted,reversed
+list set and dictionary comprehension
+iterator
+generator
