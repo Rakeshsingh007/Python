@@ -13,3 +13,11 @@ enumerate,zip,iteritem,items,sorted,reversed
 list set and dictionary comprehension
 iterator
 generator
+yield keyword
+lambda filter map reduce
+OOPS concepts
+Static and class variable
+class ,static and static methods
+Partial ffunction
+first class function
+Decorator
