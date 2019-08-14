@@ -22,3 +22,5 @@ Partial ffunction
 first class function
 Decorator
 deepcopy and shallow copy
+slicing concept
+List basic function like pop del remove insert append sort reverse sorted reversed
