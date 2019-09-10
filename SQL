@@ -1,0 +1,111 @@
+--------------------------Main Data TYPE:-----------------------
+CHAR 
+VARCHAR
+VARCHAR2
+
+NUMBER
+INTEGER
+FLOAT
+
+DATE
+
+CLOB
+BLOB
+
+--------------------CONSTRAINTS------------------
+
+NOT NULL
+UNIQUE
+PRIMARY KEY
+FOREIGN KEY
+CHECK
+DEFAULT
+
+--------------------DATABASE--------------------------
+
+Craete database ======>>> Craete database rss;
+Drop database======>>> Drop database rss;
+Show all available database ======>>> show database;
+Backup database ======>>> backup database rss to disk = 'D:\backups\testDB.bak';
+Backup database(Partial) ======>>> backup database rss to disk = 'D:\backups\testDB.bak' with differential;
+
+------------------- DDL -------------------------------
+
+CREATE
+DROP
+TRUNCATE
+RENAME
+ALTER
+MODIFY
+
+Craete database ======>>> Craete database rss;
+Drop database======>>> Drop database rss;
+
+Create table rss_table (
+id varchar(556),
+Name varchar(234),
+class_rss varchar(453)
+);
+
+create table rss_copy as 
+select id,Name,class_rss
+from rss_table
+where id ='35'
+
+
+Drop table rss_table
+truncate table rss_table 
+
+ALTER table rss_table
+add exe varchar(255);
+
+
+ALTER table rss_table
+drop column exe;
+
+ALTER table rss_table
+MODIFY exe NUMBER;
+
+--------------------DML-------------------------
+
+INSERT
+UPDATE
+DELETE
+
+INSERT into rss_table values(val1,val2,......valn) ------it will insert into all column respctivelly
+WHERE [condition]
+
+INSERT into rss_table (col1,col2,.....,coln) -----will insert whichever mentioned in col list
+values(val1,val2,......valn)
+WHERE [condition]
+
+UPDATE rss_table
+SET col1=val1,col2=val2,....coln=valn  --------if no where condition then it will Update all record
+WHERE [condition]
+
+DELETE from rss_table -------if no where condition then it will delete all record
+where [condition]
+
+----------------------DQL-------------------------
+
+SELECT * from rss_table;
+
+----------------------DCL--------------------------
+
+GRANT     GRANT UNLIMITED TABLESPACE TO books_admin;
+REVOKE    REVOKE SELECT, UPDATE, INSERT on emp from sami;
+
+----------------------TCL--------------------------
+
+COMMIT
+ROLLBACK   
+SAVEPOINT
+RELEASE
+
+SAVEPOINT savepointname ------checkpoint
+
+ROLLBACK TO SAVEPOINT_NAME ---- it will rollback till here
+ROLLBACK ----it will rollback completly
+RELEASE SAVEPOINT savepointname  ------it will delete savepointname 
+
+------------------------
