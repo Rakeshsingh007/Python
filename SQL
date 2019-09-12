@@ -1,18 +1,16 @@
 --------------------------Main Data TYPE:-----------------------
-CHAR 
-VARCHAR
-VARCHAR2
+CHAR ===> 2000 characters -- fixed length
+VARCHAR ===> 4000 characters --it will occupy data for NULL value with variable length
+VARCHAR2 ===> 4000 characters --iit will not occupy data for NULL value with variable length
 
-NUMBER
-INTEGER
-FLOAT
+NUMBER  ===> NUMBER(6,4)=45.6734 ---(1 to 38,-87 to 127)
 
 DATE
 
-CLOB
-BLOB
+CLOB  4GB
+BLOB  4GB
 
---------------------CONSTRAINTS------------------
+--------------------CONSTRAINTS---------------------------------
 
 NOT NULL
 UNIQUE
@@ -21,7 +19,7 @@ FOREIGN KEY
 CHECK
 DEFAULT
 
---------------------DATABASE--------------------------
+--------------------DATABASE------------------------------------
 
 Craete database ======>>> Craete database rss;
 Drop database======>>> Drop database rss;
@@ -29,7 +27,7 @@ Show all available database ======>>> show database;
 Backup database ======>>> backup database rss to disk = 'D:\backups\testDB.bak';
 Backup database(Partial) ======>>> backup database rss to disk = 'D:\backups\testDB.bak' with differential;
 
-------------------- DDL -------------------------------
+------------------- DDL ----------------------------------------
 
 CREATE
 DROP
@@ -46,6 +44,20 @@ id varchar(556),
 Name varchar(234),
 class_rss varchar(453)
 );
+
+create table PRODUCTS2(
+ProdID number(38) Primary key,
+ProdName varchar2(50) not null,
+Qty number(10) check (Qty > 0),
+Description varchar2(100)
+)
+
+create table LIBRARY (
+regno number references students(regno), ----forign key syntax
+bookno number references books(bookno),
+DOI date,
+DOR date
+)
 
 create table rss_copy as 
 select id,Name,class_rss
@@ -65,6 +77,8 @@ drop column exe;
 
 ALTER table rss_table
 MODIFY exe NUMBER;
+
+RENAME rss_table to rss_table2 -------its used to rename table name
 
 --------------------DML-------------------------
 
@@ -108,4 +122,56 @@ ROLLBACK TO SAVEPOINT_NAME ---- it will rollback till here
 ROLLBACK ----it will rollback completly
 RELEASE SAVEPOINT savepointname  ------it will delete savepointname 
 
-------------------------
+------------------------ROWNUM-----------
+
+SELECT * FROM Customers   ------to get first 3 record from result set
+WHERE ROWNUM <= 3;
+
+-------------------coiumn function------
+
+MAX
+MIN
+COUNT
+AVG
+SUM
+
+-------------------Special Operators ( IN , BETWEEN , LIKE , IS )-----------
+
+select * from emp
+where deptno in (10,20)
+
+select * from emp
+where deptno between 10 and 40  ------- here between is inclusive
+
+
+select * from emp
+where MGR like '76%' -----used for pattern matching
+
+
+select * from emp
+where MGR like '76__'-------used for pattern matching
+
+select * from emp
+where comm is not null ---- fetching non null column
+
+
+----------------------Logical Operators ( NOT, AND, OR )-------------
+
+select * from emp 
+where ename like '_____' and SAL >1000
+
+select * from emp 
+where ename like '_____' or SAL >1000
+
+select * from emp 
+where deptno not in (30)
+
+-----------------------(HAVING, DISTINCT)------------------------------------------
+
+select * from emp
+where deptno in (10,20)
+order by ename desc   ---------------------ORDER BY should be used always as the last statement in the SQL query.
+
+select DISTINCT deptno from emp;  ------fetches unique value of deptno
+
+----------------------------------------
