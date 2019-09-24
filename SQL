@@ -21,7 +21,7 @@ DEFAULT
 
 --------------------DATABASE------------------------------------
 
-Craete database ======>>> Craete database rss;
+Create database ======>>> Craete database rss;
 Drop database======>>> Drop database rss;
 Show all available database ======>>> show database;
 Backup database ======>>> backup database rss to disk = 'D:\backups\testDB.bak';
@@ -174,4 +174,11 @@ order by ename desc   ---------------------ORDER BY should be used always as the
 
 select DISTINCT deptno from emp;  ------fetches unique value of deptno
 
-----------------------------------------
+--------------------------------JOINS------------------------
+CROSS JOIN
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+SELF JOIN
+
