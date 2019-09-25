@@ -10,7 +10,18 @@ __name__ variable
 byte object and str object
 Inplace operator     a = a+b and it will return a+b and store it in a also
 enumerate,zip,iteritem,items,sorted,reversed
-list set and dictionary comprehension
+list set and dictionary comprehension 
+x = [x for x in range(4)] #list comprehension
+print(x)
+
+x = {x for x in range(4)} #set comprehension
+print(x)
+
+x = {x:x for x in range(4)} #Dictionary comprehension
+print(x)
+
+x = (x for x in range(4)) #generator comprehension
+
 iterator
 generator
 yield keyword
