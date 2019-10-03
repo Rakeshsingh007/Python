@@ -6,6 +6,18 @@ precedence order of execution
 Python memory management
 Namespaces and Scope
 basic datatypes
+
+Property | Data Structure					      List	  Tuple	  Dict	  Set
+
+Mutable										              Yes		  No		  Yes		  Yes
+Ordered										              Yes		  Yes		  No		  No
+Sortable									              Yes		  Yes		  No		  No
+Reversible									            Yes		  Yes		  No		  No
+Slice-able [ : ]							          Yes		  Yes		  No		  No
+Comprehensions								          Yes		  No		  Yes		  Yes
+Accessible using index operators [ ]		Yes		  Yes		  No	    No
+Merging using + operator					      Yes		  Yes		  No		  No
+
 byte object and str object
 slicing concepts
 String can be concatenate like this => "adb" "rty"
