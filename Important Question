@@ -1,15 +1,27 @@
 difference bw python 2 and 3 and which version you are using
-how python script runs
 range vs xrange
+input vs raw_input
+how python script runs and .pyc file
+precedence order of execution
 Python memory management
 Namespaces and Scope
-max = 5<4 and 5 or 4 
-max = 5 if 5<4 else 4
-args and kwargs
-__name__ variable
+basic datatypes
 byte object and str object
+slicing concepts
+String can be concatenate like this => "adb" "rty"
+List basic function like pop del remove insert append sort reverse sorted reversed extend +,*, in, not in
+difference between append and extend
+why tuple is faster than list
+max = 5<4 and 5 or 4  # turnery operator 
+max = 5 if 5<4 else 4 # turnery operator 
+swapping = a,b = b,a
+enumerate,zip,iteritem,items,sorted,reversed,join,split
+args and kwargs and packing unpacking of arguments
+Difference between == and is operator in Python
+in , not in , is , is not identity operator
+__name__ variable
 Inplace operator     a = a+b and it will return a+b and store it in a also
-enumerate,zip,iteritem,items,sorted,reversed
+
 list set and dictionary comprehension 
 x = [x for x in range(4)] #list comprehension
 print(x)
@@ -26,86 +38,37 @@ iterator
 generator
 yield keyword
 lambda filter map reduce
-OOPS concepts
+OOPS concepts polymorphism,inheritance,abstraction, encapsulation
 Static and class variable
 class ,static and static methods
-Partial ffunction
-first class function
-Decorator
-deepcopy and shallow copy
-slicing concept
-List basic function like pop del remove insert append sort reverse sorted reversed
-
-
-
-.pyc file
-datatypes
-operation applied on number dataypes.
-precedence order of execution
-diffrence between input and raw_input
-input returned string type
-String can be concatenate like this => "adb" "rty"
-Exceptions in Python
-typeerror,value err,index erri
-a['a']-> type err,indices must be int not strng
-how can be acheive method overloading
-packing unpacking of arguments
-pallindrome
-string reverse
-factorial recursion
-prime no
-fabonacci
-swapping
-diff between append extend.
-opertator applied over list +,*, in, not in
-Remove duplicates from list
-why tuple is faster than list
-dict insertion order is not preserved
-Dict key can be any immutable obj
-Frozen set
-collection => orderedDict=>  it preserve inserion order
-Diffrence between modules and packages
-how to find current working directory
-how to get list of directory
-mkdir command
-rename file
-exception handling
-combination we can use in exception
-read,readline,readlines
-fflush
-with open
-self
+method overloading
+operator overloading using magic method
 class object structure
 constructor
 destructor 
+issubclass and super
+@property setter getter deleter
 new, init, magic fun
-decorators
-class variable, function variable, instance variable
-Instance cannot modify the class level vriable
-
-oops property
-polymorphism,inheritance,abstraction, encapsulation
-if we want to make anything static we have to make it class variable
-
-Types of method class, static, instance
-
-
-Decorators
+Instance can modify the class level variable refer coreyscahfer
 abstract class
-
-end parameter in print function
-enumerate
-
-destructor in python
-lambda filter map reduce
-
-diffrence bw normal and lambda fun
-
-operator overloading in python->magic method
-shallow copy deep copy
-python memory management
-
-
+Partial function
+first class function
+Decorator
+deepcopy and shallow copy
+Exceptions in Python and custom exception
+typeerror,value error ,index error 
+dict insertion order is not preserved ---> NO
+collection => orderedDict=>  it preserve inserion order
+Dict key can be any immutable object -----> YES
+set and Frozen set
+Diffrence between modules and packages
+Python OS Module
+how to find current working directory   ---> os.getcwd()
+how to get list of directory ---> os.listdir()
+mkdir command  ---> os.mkdir() 
+rename file  ---> os.rename('old.txt','New.txt')
+python sys module 
+File Handling read,readline,readlines seek tail fflush with open write
 
 Data Structure
 
@@ -118,5 +81,3 @@ Insertion Sort
 Merge sort
 Heap Sort
 Quick Sort
-
-
