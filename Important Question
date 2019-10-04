@@ -7,15 +7,15 @@ Python memory management
 Namespaces and Scope
 basic datatypes
 
-Property | Data Structure					      List	  Tuple	  Dict	  Set
+Property | Data Structure					      List	  	  Tuple	  	  Dict	  	  Set
 
-Mutable										              Yes		  No		  Yes		  Yes
-Ordered										              Yes		  Yes		  No		  No
-Sortable									              Yes		  Yes		  No		  No
-Reversible									            Yes		  Yes		  No		  No
-Slice-able [ : ]							          Yes		  Yes		  No		  No
-Comprehensions								          Yes		  No		  Yes		  Yes
-Accessible using index operators [ ]		Yes		  Yes		  No	    No
+Mutable										      Yes		  No		  Yes		  Yes
+Ordered										      Yes		  Yes		  No		  No
+Sortable									      Yes		  Yes		  No		  No
+Reversible									      Yes		  Yes		  No		  No
+Slice-able [ : ]							      Yes		  Yes		  No		  No
+Comprehensions								      Yes		  No		  Yes		  Yes
+Accessible using index operators [ ]			  Yes		  Yes		  No	      No
 Merging using + operator					      Yes		  Yes		  No		  No
 
 byte object and str object
@@ -23,6 +23,7 @@ slicing concepts
 String can be concatenate like this => "adb" "rty"
 List basic function like pop del remove insert append sort reverse sorted reversed extend +,*, in, not in
 difference between append and extend
+ser basic function like add,update,remove,discard,pop
 why tuple is faster than list
 max = 5<4 and 5 or 4  # turnery operator 
 max = 5 if 5<4 else 4 # turnery operator 
@@ -56,7 +57,7 @@ class ,static and static methods
 method overloading
 operator overloading using magic method
 class object structure
-constructor
+constructor  
 destructor 
 issubclass and super
 @property setter getter deleter
@@ -66,7 +67,7 @@ abstract class
 Partial function
 first class function
 Decorator
-deepcopy and shallow copy
+deepcopy,shallow copy and object assignment(=)
 Exceptions in Python and custom exception
 typeerror,value error ,index error 
 dict insertion order is not preserved ---> NO
