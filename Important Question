@@ -1,4 +1,4 @@
-difference bw python 2 and 3 and which version you are using
+difference bw python 2 and 3 and which version you are usingand why
 range vs xrange
 input vs raw_input
 how python script runs and .pyc file
@@ -21,18 +21,47 @@ Merging using + operator					      Yes		  Yes		  No		  No
 byte object and str object
 slicing concepts
 String can be concatenate like this => "adb" "rty"
-List basic function like pop del remove insert append sort reverse sorted reversed extend +,*, in, not in
+
+List basic operations like pop del remove insert append sort reverse sorted reversed extend +,*, in, not in
 difference between append and extend
-ser basic function like add,update,remove,discard,pop
+
+Tuple basic operations like + ,count(),index()
 why tuple is faster than list
-max = 5<4 and 5 or 4  # turnery operator 
-max = 5 if 5<4 else 4 # turnery operator 
+TUPLE COMPREHENSIONS: do not exist.
+
+set => basic operations like add,update,|=,remove,discard,pop
+In set only unmutable data(string,tuple,integer,floating number,frozenset) we can use as element.
+set => issubset() or <= & issuperset() or >= , if both are same then both function will return TRUE as "Any set is a subset of itself"
+SET OPERATIONS: intersection() &, difference() -, symmetric difference() ^, union() |,difference_update() -=, intersection_update() &=, symmetric_difference_update() ^=
+frozenset concept
+Methods supported by SETS           Methods supported by FROZENSETS
+ 
+add()
+clear()
+copy()                          copy()
+difference()                    difference()
+difference_update()
+discard()
+intersection()                  intersection()
+intersection_update()
+isdisjoint()                    isdisjoint()
+issubset()                      issubset()
+issuperset()                    issuperset()
+pop()
+remove()
+symmetric_difference()          symmetric_difference()
+symmetric_difference_update()
+union()                         union()
+update()
+
+max = 5<4 and 5 or 4  # turnery operator
+max = 5 if 5<4 else 4 # turnery operator
 swapping = a,b = b,a
 enumerate,zip,iteritem,items,sorted,reversed,join,split
 args and kwargs and packing unpacking of arguments
 Difference between == and is operator in Python
 in , not in , is , is not identity operator
-__name__ variable
+__name__ variable and used cases
 Inplace operator     a = a+b and it will return a+b and store it in a also
 
 list set and dictionary comprehension 
