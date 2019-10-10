@@ -6,7 +6,9 @@ precedence order of execution
 Python memory management
 Namespaces and Scope
 basic datatypes
-
+-------------------------------------------------------------------------------
+							      DataTypes
+-------------------------------------------------------------------------------
 Property | Data Structure					      List	  	  Tuple	  	  Dict	  	  Set
 
 Mutable										      Yes		  No		  Yes		  Yes
@@ -17,24 +19,36 @@ Slice-able [ : ]							      Yes		  Yes		  No		  No
 Comprehensions								      Yes		  No		  Yes		  Yes
 Accessible using index operators [ ]			  Yes		  Yes		  No	      No
 Merging using + operator					      Yes		  Yes		  No		  No
-
+-------------------------------------------------------------------------------
+							      String
+-------------------------------------------------------------------------------
 byte object and str object
 slicing concepts
 String can be concatenate like this => "adb" "rty"
-
+-------------------------------------------------------------------------------
+							      List
+-------------------------------------------------------------------------------
 List basic operations like pop del remove insert append sort reverse sorted reversed extend +,*, in, not in
 difference between append and extend
-
+x = [x for x in range(4)] #list comprehension
+-------------------------------------------------------------------------------
+							      Tuple
+-------------------------------------------------------------------------------
 Tuple basic operations like + ,count(),index()
 why tuple is faster than list
 TUPLE COMPREHENSIONS: do not exist.
-
+-------------------------------------------------------------------------------
+							      Set
+-------------------------------------------------------------------------------
 set => basic operations like add,update,|=,remove,discard,pop
 In set only unmutable data(string,tuple,integer,floating number,frozenset) we can use as element.
 set => issubset() or <= & issuperset() or >= , if both are same then both function will return TRUE as "Any set is a subset of itself"
 SET OPERATIONS: intersection() &, difference() -, symmetric difference() ^, union() |,difference_update() -=, intersection_update() &=, symmetric_difference_update() ^=
+#set comprehension
+x = {x for x in range(4)} 
+
 frozenset concept
-Methods supported by SETS           Methods supported by FROZENSETS
+Methods supported by SETS       Methods supported by FROZENSETS
  
 add()
 clear()
@@ -53,31 +67,48 @@ symmetric_difference()          symmetric_difference()
 symmetric_difference_update()
 union()                         union()
 update()
+-------------------------------------------------------------------------------
+							      Dictionary
+-------------------------------------------------------------------------------
+Dictionary basic operation like Keys(),values(),items(),update(),get() or [key],del , pop(), popitem()
+OrderedDict ==> from collections import OrderedDict 
+Sorting the dictionary by value or key
 
+x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+#Sort a Python dictionary by key
+
+for key in sorted(x):    
+    print("%s: %s" % (key, x[key]))
+
+#Sort a Python dictionary by Value
+
+sorted_x = sorted(x.items(), key=lambda kv: kv[1])
+
+#maximum and minimum value of a Python dictionary
+
+key_max = max(x.keys(), key=(lambda k: x[k]))
+key_min = min(x.keys(), key=(lambda k: x[k]))
+
+reverse of dictionary by value or key
+fromkeys() and setdefault() in python
+Packing and Unpacking of Dictionary
+#Dictionary comprehension ==> x = {x:x for x in range(4)}
+-------------------------------------------------------------------------------
+							      SET
+-------------------------------------------------------------------------------
 max = 5<4 and 5 or 4  # turnery operator
 max = 5 if 5<4 else 4 # turnery operator
-swapping = a,b = b,a
+swapping = a,b = b,a   
 enumerate,zip,iteritem,items,sorted,reversed,join,split
 args and kwargs and packing unpacking of arguments
 Difference between == and is operator in Python
-in , not in , is , is not identity operator
+in , not in , is , is not identity operator 
 __name__ variable and used cases
 Inplace operator     a = a+b and it will return a+b and store it in a also
 
-list set and dictionary comprehension 
-x = [x for x in range(4)] #list comprehension
-print(x)
-
-x = {x for x in range(4)} #set comprehension
-print(x)
-
-x = {x:x for x in range(4)} #Dictionary comprehension
-print(x)
-
-x = (x for x in range(4)) #generator comprehension
-
 iterator
 generator
+x = (x for x in range(4)) #generator comprehension
 yield keyword
 lambda filter map reduce
 OOPS concepts polymorphism,inheritance,abstraction, encapsulation
@@ -96,7 +127,7 @@ abstract class
 Partial function
 first class function
 Decorator
-deepcopy,shallow copy and object assignment(=)
+deepcopy,shallow copy and object assignment(=) refer this https://stackoverflow.com/questions/17246693/what-is-the-difference-between-shallow-copy-deepcopy-and-normal-assignment-oper
 Exceptions in Python and custom exception
 typeerror,value error ,index error 
 dict insertion order is not preserved ---> NO
