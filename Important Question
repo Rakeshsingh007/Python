@@ -5,9 +5,12 @@ how python script runs and .pyc file
 precedence order of execution
 Python memory management
 Namespaces and Scope
-basic datatypes
+max = 5<4 and 5 or 4  # turnery operator
+max = 5 if 5<4 else 4 # turnery operator
+swapping = a,b = b,a  
+Inplace operator ==> a = a+b and it will return a+b and store it in a also
 -------------------------------------------------------------------------------
-							      DataTypes
+				DataTypes
 -------------------------------------------------------------------------------
 Property | Data Structure					      List	  	  Tuple	  	  Dict	  	  Set
 
@@ -20,25 +23,25 @@ Comprehensions								      Yes		  No		  Yes		  Yes
 Accessible using index operators [ ]			  Yes		  Yes		  No	      No
 Merging using + operator					      Yes		  Yes		  No		  No
 -------------------------------------------------------------------------------
-							      String
+				String
 -------------------------------------------------------------------------------
 byte object and str object
 slicing concepts
 String can be concatenate like this => "adb" "rty"
 -------------------------------------------------------------------------------
-							      List
+				 List
 -------------------------------------------------------------------------------
-List basic operations like pop del remove insert append sort reverse sorted reversed extend +,*, in, not in
+List basic operations like pop del remove insert append extend sort reverse sorted reversed extend +,*, in, not in
 difference between append and extend
 x = [x for x in range(4)] #list comprehension
 -------------------------------------------------------------------------------
-							      Tuple
+			         Tuple
 -------------------------------------------------------------------------------
 Tuple basic operations like + ,count(),index()
 why tuple is faster than list
-TUPLE COMPREHENSIONS: do not exist.
+TUPLE COMPREHENSIONS: do not exist
 -------------------------------------------------------------------------------
-							      Set
+				 Set
 -------------------------------------------------------------------------------
 set => basic operations like add,update,|=,remove,discard,pop
 In set only unmutable data(string,tuple,integer,floating number,frozenset) we can use as element.
@@ -68,9 +71,9 @@ symmetric_difference_update()
 union()                         union()
 update()
 -------------------------------------------------------------------------------
-							      Dictionary
+				Dictionary
 -------------------------------------------------------------------------------
-Dictionary basic operation like Keys(),values(),items(),update(),get() or [key],del , pop(), popitem()
+Dictionary basic operation like Keys(),values(),items(),update(),get() or [key],del , pop(), popitem(), fromkeys(), setdefault()
 OrderedDict ==> from collections import OrderedDict 
 Sorting the dictionary by value or key
 
@@ -90,27 +93,11 @@ key_max = max(x.keys(), key=(lambda k: x[k]))
 key_min = min(x.keys(), key=(lambda k: x[k]))
 
 reverse of dictionary by value or key
-fromkeys() and setdefault() in python
 Packing and Unpacking of Dictionary
 #Dictionary comprehension ==> x = {x:x for x in range(4)}
 -------------------------------------------------------------------------------
-							      SET
--------------------------------------------------------------------------------
-max = 5<4 and 5 or 4  # turnery operator
-max = 5 if 5<4 else 4 # turnery operator
-swapping = a,b = b,a   
-enumerate,zip,iteritem,items,sorted,reversed,join,split
-args and kwargs and packing unpacking of arguments
-Difference between == and is operator in Python
-in , not in , is , is not identity operator 
-__name__ variable and used cases
-Inplace operator     a = a+b and it will return a+b and store it in a also
-
-iterator
-generator
-x = (x for x in range(4)) #generator comprehension
-yield keyword
-lambda filter map reduce
+					OOPS    
+------------------------------------------------------------------------------- 
 OOPS concepts polymorphism,inheritance,abstraction, encapsulation
 Static and class variable
 class ,static and static methods
@@ -120,31 +107,40 @@ class object structure
 constructor  
 destructor 
 issubclass and super
-@property setter getter deleter
+@property setter getter deleter property()
 new, init, magic fun
 Instance can modify the class level variable refer coreyscahfer
 abstract class
+-------------------------------------------------------------------------------
+							      
+------------------------------------------------------------------------------- 
+enumerate,zip,iteritem,items,sorted,reversed,join,split
+args and kwargs and packing unpacking of arguments
+Difference between ==,isintance and is operator in Python
+__name__ variable and used cases
+iterator
+generator
+x = (x for x in range(4)) #generator comprehension
+yield keyword
 Partial function
 first class function
 Decorator
+randint() and randrange() and range module
+lambda filter map reduce
 deepcopy,shallow copy and object assignment(=) refer this https://stackoverflow.com/questions/17246693/what-is-the-difference-between-shallow-copy-deepcopy-and-normal-assignment-oper
 Exceptions in Python and custom exception
 typeerror,value error ,index error 
-dict insertion order is not preserved ---> NO
-collection => orderedDict=>  it preserve inserion order
-Dict key can be any immutable object -----> YES
-set and Frozen set
 Diffrence between modules and packages
-Python OS Module
+Python OS ,sys module
 how to find current working directory   ---> os.getcwd()
 how to get list of directory ---> os.listdir()
 mkdir command  ---> os.mkdir() 
 rename file  ---> os.rename('old.txt','New.txt')
-python sys module 
+
 File Handling read,readline,readlines seek tail fflush with open write
-
-Data Structure
-
+-------------------------------------------------------------------------------
+				DATA STRUCTURE    
+------------------------------------------------------------------------------- 
 Linear Search 
 Binary Search
 
