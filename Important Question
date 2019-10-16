@@ -10,7 +10,7 @@ max = 5 if 5<4 else 4 # turnery operator
 swapping = a,b = b,a  
 Inplace operator ==> a = a+b and it will return a+b and store it in a also
 -------------------------------------------------------------------------------
-				DataTypes
+							      DataTypes
 -------------------------------------------------------------------------------
 Property | Data Structure					      List	  	  Tuple	  	  Dict	  	  Set
 
@@ -23,25 +23,25 @@ Comprehensions								      Yes		  No		  Yes		  Yes
 Accessible using index operators [ ]			  Yes		  Yes		  No	      No
 Merging using + operator					      Yes		  Yes		  No		  No
 -------------------------------------------------------------------------------
-				String
+							      String
 -------------------------------------------------------------------------------
 byte object and str object
 slicing concepts
 String can be concatenate like this => "adb" "rty"
 -------------------------------------------------------------------------------
-				 List
+							      List
 -------------------------------------------------------------------------------
 List basic operations like pop del remove insert append extend sort reverse sorted reversed extend +,*, in, not in
 difference between append and extend
 x = [x for x in range(4)] #list comprehension
 -------------------------------------------------------------------------------
-			         Tuple
+							      Tuple
 -------------------------------------------------------------------------------
 Tuple basic operations like + ,count(),index()
 why tuple is faster than list
 TUPLE COMPREHENSIONS: do not exist
 -------------------------------------------------------------------------------
-				 Set
+							      Set
 -------------------------------------------------------------------------------
 set => basic operations like add,update,|=,remove,discard,pop
 In set only unmutable data(string,tuple,integer,floating number,frozenset) we can use as element.
@@ -71,7 +71,7 @@ symmetric_difference_update()
 union()                         union()
 update()
 -------------------------------------------------------------------------------
-				Dictionary
+							      Dictionary
 -------------------------------------------------------------------------------
 Dictionary basic operation like Keys(),values(),items(),update(),get() or [key],del , pop(), popitem(), fromkeys(), setdefault()
 OrderedDict ==> from collections import OrderedDict 
@@ -96,7 +96,7 @@ reverse of dictionary by value or key
 Packing and Unpacking of Dictionary
 #Dictionary comprehension ==> x = {x:x for x in range(4)}
 -------------------------------------------------------------------------------
-					OOPS    
+							  OOPS    
 ------------------------------------------------------------------------------- 
 OOPS concepts polymorphism,inheritance,abstraction, encapsulation
 Static and class variable
@@ -139,7 +139,7 @@ rename file  ---> os.rename('old.txt','New.txt')
 
 File Handling read,readline,readlines seek tail fflush with open write
 -------------------------------------------------------------------------------
-				DATA STRUCTURE    
+							  DATA STRUCTURE    
 ------------------------------------------------------------------------------- 
 Linear Search 
 Binary Search
@@ -150,3 +150,38 @@ Insertion Sort
 Merge sort
 Heap Sort
 Quick Sort
+
+-------------------------------------------------------------------------------
+							  REGULAR EXPRESSION  
+------------------------------------------------------------------------------- 
+
+
+.       - Any Character Except New Line
+\d      - Digit (0-9)
+\D      - Not a Digit (0-9)
+\w      - Word Character (a-z, A-Z, 0-9, _)
+\W      - Not a Word Character
+\s      - Whitespace (space, tab, newline)
+\S      - Not Whitespace (space, tab, newline)
+
+\b      - Word Boundary
+\B      - Not a Word Boundary
+^       - Beginning of a String
+$       - End of a String
+
+[]      - Matches Characters in brackets
+[^ ]    - Matches Characters NOT in brackets
+|       - Either Or
+( )     - Group
+
+Quantifiers:
+*       - 0 or More
++       - 1 or More
+?       - 0 or One
+{3}     - Exact Number
+{3,4}   - Range of Numbers (Minimum, Maximum)
+
+
+#### Sample Regexs ####
+
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
