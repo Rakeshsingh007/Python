@@ -109,7 +109,8 @@ destructor
 issubclass and super
 @property setter getter deleter property()
 new, init, magic fun
-Instance can modify the class level variable refer coreyscahfer
+Instance can modify the class level variable refer coreyscahfer video 3
+classmethod  can be access using instance but if you will modify using instance anyhow it will change for all instance as we are using cls keyword in it refer coreyscahfer video3
 abstract class
 -------------------------------------------------------------------------------
 							      
@@ -154,7 +155,12 @@ Quick Sort
 -------------------------------------------------------------------------------
 							  REGULAR EXPRESSION  
 ------------------------------------------------------------------------------- 
+Python re module
+re.match() vs re.search() vs re.findall()
+sub() and split() and group() 
 
+
+. + * ? [] $ ^ () {} | \ escape required
 
 .       - Any Character Except New Line
 \d      - Digit (0-9)
