@@ -160,7 +160,27 @@ Exception Handling
 Exceptions in Python and custom exception
 TypeError,ValueError,IndexError 
 
-File Handling read,readline,readlines seek tail fflush with open write
+File Handling
+readable
+read
+readline
+readlines
+
+writable
+write
+writelines
+
+name
+
+close
+closed
+
+seekable
+seek
+
+tell
+
+truncate
 -------------------------------------------------------------------------------
 							  DATA STRUCTURE    
 ------------------------------------------------------------------------------- 
