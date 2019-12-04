@@ -1,4 +1,4 @@
-difference bw python 2 and 3 and which version you are usingand why
+difference bw python 2 and 3 and which version you are using and why
 range vs xrange
 input vs raw_input
 how python script runs and .pyc file
@@ -8,38 +8,48 @@ Namespaces and Scope
 max = 5<4 and 5 or 4  # turnery operator
 max = 5 if 5<4 else 4 # turnery operator
 swapping = a,b = b,a  
-Inplace operator ==> a = a+b and it will return a+b and store it in a also
+Inplace operator ==> a = a+b and it will return a+b and store it in a seperate variable a+=b will store in a itself
 -------------------------------------------------------------------------------
 							      DataTypes
 -------------------------------------------------------------------------------
-Property | Data Structure					      List	  	  Tuple	  	  Dict	  	  Set
+Property | Data Structure					  string   List	  	  Tuple	  	  Dict	  	  Set
 
-Mutable										      Yes		  No		  Yes		  Yes
-Ordered										      Yes		  Yes		  No		  No
-Sortable									      Yes		  Yes		  No		  No
-Reversible									      Yes		  Yes		  No		  No
-Slice-able [ : ]							      Yes		  Yes		  No		  No
-Comprehensions								      Yes		  No		  Yes		  Yes
-Accessible using index operators [ ]			  Yes		  Yes		  No	      No
-Merging using + operator					      Yes		  Yes		  No		  No
+Mutable										  No        Yes		  No		  Yes		  Yes
+Ordered										  yes       Yes		  Yes		  No		  No
+Sortable									  No        Yes		  Yes		  No		  No
+Reversible									  No        Yes		  Yes		  No		  No
+Slice-able [ : ]							  Yes       Yes		  Yes		  No		  No
+Comprehensions								  No        Yes		  No		  Yes		  Yes
+Accessible using index operators [ ]		  yes       Yes		  Yes		  No	      No
+Merging using + operator					  No        Yes		  Yes		  No		  No
 -------------------------------------------------------------------------------
 							      String
 -------------------------------------------------------------------------------
 byte object and str object
+encode and decode
 slicing concepts
 String can be concatenate like this => "adb" "rty"
 -------------------------------------------------------------------------------
 							      List
 -------------------------------------------------------------------------------
-List basic operations like pop del remove insert append extend sort reverse sorted reversed extend +,*, in, not in
+List basic operations like pop del remove insert append extend sort reverse sorted reversed  +,*, in, not in 
 difference between append and extend
-x = [x for x in range(4)] #list comprehension
+x = [x if x%2 == 0 else None for x in range(4)] #list comprehension
+
+pop = Remove and return item at index (default last). Raises IndexError if list is empty or index is out of range.
+remove = Remove first occurrence of value. Raises ValueError if the value is not present. return None
+insert = Insert object before index  ==>> list.insert(index, element) 
+append = Append object to the end of the list
+extend = Extend list by appending elements from the iterable.it must be itrabele
 -------------------------------------------------------------------------------
 							      Tuple
 -------------------------------------------------------------------------------
 Tuple basic operations like + ,count(),index()
-why tuple is faster than list
-TUPLE COMPREHENSIONS: do not exist
+why tuple is faster than list  ===>>>(Tuples are stored in a single block of memory. Tuples are immutalbe,
+It doesn't require extraspace to store new objects. 
+Lists are allocated in two blocks: the fixed one with all the Python object information and a variable sized block for the data. 
+It is the reason creating a tuple is faster than List)
+Tuple comprehension: do not exist
 -------------------------------------------------------------------------------
 							      Set
 -------------------------------------------------------------------------------
@@ -47,12 +57,13 @@ set => basic operations like add,update,|=,remove,discard,pop
 In set only unmutable data(string,tuple,integer,floating number,frozenset) we can use as element.
 set => issubset() or <= & issuperset() or >= , if both are same then both function will return TRUE as "Any set is a subset of itself"
 SET OPERATIONS: intersection() &, difference() -, symmetric difference() ^, union() |,difference_update() -=, intersection_update() &=, symmetric_difference_update() ^=
-#set comprehension
-x = {x for x in range(4)} 
+
+x = {x if x%2 == 0 else None for x in range(4)} #set comprehension
 
 frozenset concept
+
 Methods supported by SETS       Methods supported by FROZENSETS
- 
+
 add()
 clear()
 copy()                          copy()
@@ -74,6 +85,12 @@ update()
 							      Dictionary
 -------------------------------------------------------------------------------
 Dictionary basic operation like Keys(),values(),items(),update(),get() or [key],del , pop(), popitem(), fromkeys(), setdefault()
+
+pop() = If specified key is present in the dictionary, it remove and return its value.  element = Dictionary.pop('Key')
+
+popitem() = The popitem() doesn't take any parameters,returns an arbitrary element (key, value) pair from the dictionary
+removes an arbitrary element (the same element which is returned) from the dictionary
+
 OrderedDict ==> from collections import OrderedDict 
 Sorting the dictionary by value or key
 
@@ -94,12 +111,13 @@ key_min = min(x.keys(), key=(lambda k: x[k]))
 
 reverse of dictionary by value or key
 Packing and Unpacking of Dictionary
-#Dictionary comprehension ==> x = {x:x for x in range(4)}
+#Dictionary comprehension ==> x = {x:x if x%2 == 0 else None for x in range(4)} #Must see
 -------------------------------------------------------------------------------
 							  OOPS    
 ------------------------------------------------------------------------------- 
-OOPS concepts polymorphism,inheritance,abstraction, encapsulation
-Static and class variable
+OOPS concepts polymorphism,inheritance,encapsulation ==>> myObject._MyClass__hiddenVariable
+inheritance ==>>Multilevel,Multiple and MRO concept
+Class and instance variable
 class ,static and static methods
 method overloading
 operator overloading using magic method
@@ -116,9 +134,12 @@ abstract class
 							      
 ------------------------------------------------------------------------------- 
 enumerate,zip,iteritem,items,sorted,reversed,join,split
+__name__ variable and used cases
 args and kwargs and packing unpacking of arguments
 Difference between ==,isintance and is operator in Python
-__name__ variable and used cases
+deepcopy,shallow copy and object assignment(=) refer this https://stackoverflow.com/questions/17246693/what-is-the-difference-between-shallow-copy-deepcopy-and-normal-assignment-oper
+
+lambda filter map reduce
 iterator
 generator
 x = (x for x in range(4)) #generator comprehension
@@ -126,17 +147,18 @@ yield keyword
 Partial function
 first class function
 Decorator
-randint() and randrange() and range module
-lambda filter map reduce
-deepcopy,shallow copy and object assignment(=) refer this https://stackoverflow.com/questions/17246693/what-is-the-difference-between-shallow-copy-deepcopy-and-normal-assignment-oper
-Exceptions in Python and custom exception
-typeerror,value error ,index error 
+
 Diffrence between modules and packages
-Python OS ,sys module
+randint() and randrange() and range module
+Python OS ,sys module,Copy module 
 how to find current working directory   ---> os.getcwd()
 how to get list of directory ---> os.listdir()
 mkdir command  ---> os.mkdir() 
 rename file  ---> os.rename('old.txt','New.txt')
+
+Exception Handling
+Exceptions in Python and custom exception
+TypeError,ValueError,IndexError 
 
 File Handling read,readline,readlines seek tail fflush with open write
 -------------------------------------------------------------------------------
