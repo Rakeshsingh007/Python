@@ -19,6 +19,19 @@ FOREIGN KEY
 CHECK
 DEFAULT
 
+--------------------------EXECUTE order-------------------------
+1.  FROM
+2.  ON
+3.  JOIN
+4.  WHERE
+5.  GROUP BY
+6.  WITH CUBE or WITH ROLLUP
+7.  HAVING
+8.  SELECT
+9.  DISTINCT
+10. ORDER BY
+11. TOP
+
 --------------------DATABASE------------------------------------
 
 Create database ======>>> Craete database rss;
@@ -35,9 +48,10 @@ TRUNCATE
 RENAME
 ALTER
 MODIFY
+ADD
 
 Craete database ======>>> Craete database rss;
-Drop database======>>> Drop database rss;
+Drop database   ======>>> Drop database rss;
 
 Create table rss_table (
 id varchar(556),
@@ -58,6 +72,8 @@ bookno number references books(bookno),
 DOI date,
 DOR date
 )
+
+CREATE TABLE TAB_COPY AS SELECT * FROM EMP WHERE 1=2  --- To copy only structure of table
 
 create table rss_copy as 
 select id,Name,class_rss
@@ -102,6 +118,8 @@ where [condition]
 
 ----------------------DQL-------------------------
 
+SELECT
+
 SELECT * from rss_table;
 
 ----------------------DCL--------------------------
@@ -127,7 +145,7 @@ RELEASE SAVEPOINT savepointname  ------it will delete savepointname
 SELECT * FROM Customers   ------to get first 3 record from result set
 WHERE ROWNUM <= 3;
 
--------------------coiumn function------
+-------------------column function------
 
 MAX
 MIN
