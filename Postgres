@@ -1,0 +1,49 @@
+-- Table: public.connections_connections
+
+-- DROP TABLE public.connections_connections;
+
+CREATE TABLE public.connections_connections
+(
+    id integer NOT NULL DEFAULT nextval('connections_connections_id_seq'::regclass),
+    status character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    created timestamp with time zone NOT NULL,
+    is_read character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    from_user_id integer,
+    to_user_id integer NOT NULL,
+    updated timestamp with time zone NOT NULL,
+    CONSTRAINT connections_connections_pkey PRIMARY KEY (id),
+    CONSTRAINT connections_connecti_from_user_id_417788f3_fk_accounts_ FOREIGN KEY (from_user_id)
+        REFERENCES public.accounts_customuser (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        DEFERRABLE INITIALLY DEFERRED,
+    CONSTRAINT connections_connecti_to_user_id_64f5d150_fk_accounts_ FOREIGN KEY (to_user_id)
+        REFERENCES public.accounts_customuser (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        DEFERRABLE INITIALLY DEFERRED
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.connections_connections
+    OWNER to postgres;
+
+-- Index: connections_connections_from_user_id_417788f3
+
+-- DROP INDEX public.connections_connections_from_user_id_417788f3;
+
+CREATE INDEX connections_connections_from_user_id_417788f3
+    ON public.connections_connections USING btree
+    (from_user_id ASC NULLS LAST)
+    TABLESPACE pg_default;
+
+
+-- Index: connections_connections_to_user_id_64f5d150
+
+-- DROP INDEX public.connections_connections_to_user_id_64f5d150;
+
+CREATE INDEX connections_connections_to_user_id_64f5d150
+    ON public.connections_connections USING btree
+    (to_user_id ASC NULLS LAST)
+    TABLESPACE pg_default;
